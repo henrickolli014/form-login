@@ -1,0 +1,16 @@
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+input::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+input:focus::placeholder {
+    color: transparent;
+}

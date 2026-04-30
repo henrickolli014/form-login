@@ -1,0 +1,84 @@
+#principal {
+    width: -webkit-fill-available;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(49, 49, 49);
+}
+
+form {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.input-box {
+    width: 70%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+#input-case {
+    width: -webkit-fill-available;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(63, 63, 63);
+    outline: none;
+    padding-inline: 15px;
+    transition: 0.4s ease;
+    color: white;
+}
+
+#input-case:hover {
+    background-color: rgb(102, 102, 102);
+}
+
+input::placeholder {
+    padding: 2px;
+}
+
+.button-box {
+    width: 110px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#button-case {
+   height: 35px;
+   width: -webkit-fill-available;
+   border-radius: 5px;
+   border: none;
+   background: blue;
+   color: white;
+   transition: 0.2s ease;
+}
+
+#button-case:hover {
+    box-shadow: 0 0 5px rgba(0, 110, 255, 0.7);
+    background-color: rgb(0, 53, 168);
+}
+
+#corpo {
+    background-color: rgb(49, 49, 49);
+}
+
+#complemento {
+    flex: 1;
+    margin: 0;
+}
+
+p {
+    margin-left: 47px;
+    margin-top: 0;
+    font: bold 8pt;
+    color: white;
+}
+
+
+

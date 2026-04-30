@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='login_page.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='global.css')}}">
+    <title>Document</title>
+</head>
+<body id="corpo">
+    <div id="principal">
+        <form action="" method="get">
+            <div class="input-box">
+                <input type="text" name="research" id="input-case" placeholder="Pergunte">
+            </div>
+            <div class="button-box">
+                <button type="submit" id="button-case">
+                    Pesquisar
+                </button>
+            </div>
+        </form>
+
+    </div>
+
+    <div id="complemento">
+        <p>Você pesquisou: {{context['research']}}</p>
+    </div>
+</body>
+</html>

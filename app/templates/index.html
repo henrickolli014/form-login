@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='global.css')}}">
+    <title>Flask</title>
+</head>
+<body>
+    <div class="cabecalho">
+        <div class="row">
+            Flask
+        </div>
+    </div>
+    <div class="corpo">
+        <div id="texto">
+            <form action="/login/" method="POST" id="formulario">
+                <div class="titulo">
+                    Login
+                </div>
+                <div class="inputs">
+                    <input type="email" name="email" id="email-box" placeholder="Your@email.com">
+                    <div id="alert-box">Email Obrigatório!</div>
+                    <input type="password" name="password" id="password-box" placeholder="Senha">
+                    <div id="alert-password">Senha Insuficiente!</div>
+                </div>
+                <div id="button-box">
+                    <button type="submit" class="button-case" onclick="ClickButton(event)">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
