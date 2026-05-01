@@ -16,12 +16,16 @@
         <div id="alert-box">
             Email Obrigatório!
         </div>
-        <input type="password" name="password" id="password-box" placeholder="Senha">
-        <div id="alert-password">
-            Senha Insuficiente!
+        <div id="vision-box">
+            <input type="password" name="password" id="password-box" placeholder="Senha">
+            <img src="{{url_for('static', filename='images/6684701.png')}}" alt="visualizar senha" id="vision" onclick="ClickVisibility()">
+            <img src="{{url_for('static', filename='images/visivel.png')}}" alt="ocultar senha" id="not-visible" onclick="ClickVisibility()">
+            <span id="alert-password">
+                Senha Insuficiente!
+            </span>
         </div>
         <div id="button-box">
-            <button type="submit" class="button-case" onclick="ClickButton(event)"><div id="button-enter">Entrar</div></button>
+            <button type="submit" class="button-case" onclick="ClickButton(event)"><span id="enter">Entrar</span></button>
         </div>
     </form>
     <script src="{{url_for('static', filename='script.js')}}"></script>

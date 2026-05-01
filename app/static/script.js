@@ -40,3 +40,19 @@ function AdequatePassword() {
         return false
     }
 }
+
+function ClickVisibility() {
+    const visible = document.getElementById('vision');
+    const ocult = document.getElementById('not-visible');
+    const password = document.getElementById('password-box');
+
+    if (password.type === 'password') {
+        password.type = 'text';
+        visible.style.display = 'none';
+        ocult.style.display = 'block';
+    } else {
+        password.type = 'password';
+        visible.style.display = 'block';
+        ocult.style.display = 'none';
+    }
+}

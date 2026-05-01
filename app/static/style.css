@@ -8,6 +8,7 @@
     flex-direction: row;
     padding: 0 20px;
     overflow: auto;
+    position: relative;
 }
 
 
@@ -18,7 +19,7 @@
 }
 
 
-input:focus {
+input {
     outline: none;
     color: white;
     caret-color: black;
@@ -29,44 +30,74 @@ input:focus {
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    width: 300px;
+    width: 500px;
     padding: 20px 0;
     max-height: 95vh;
+    transition: 0.5s ease;
 }
 
 #email-box, #password-box {
     margin-top: 25px;
     padding: 3%;
-    border-radius: 10px;
+    border-radius: 7px;
     border: 1px solid rgb(255, 255, 255);
     background-color: transparent;
     transition: 0.2s ease;
     width: -webkit-fill-available;
 }
 
+
+#vision-box {
+    position: relative;
+    width: -webkit-fill-available;
+    height: 80px;
+    margin-bottom: 50px;
+}
+
+img {
+    position: absolute;
+    right: 6px;
+    bottom: 28px;
+    cursor: pointer;
+}
+
+#vision {
+    display: block;
+}
+
+#not-visible {
+    bottom: 24px;
+    display: none;
+}
+
 #email-box:hover, #password-box:hover {
     box-shadow: 0 0 6px rgba(255, 255, 255, 1.2);
 }
+ #email-box::placeholder, #password-box::placeholder {
+    font-size: clamp(12px, 2vw, 18px);
+ }
 
-#button-box {
-    bottom: 7px;
-    display: flex;
-    width: 100%;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-}
 
 .button-case {
+    margin-top: 40px;
     width: 100%;
-    height: 80%;
-    border-radius: 10px;
+    height: 35px;
+    border-radius: 20px;
     border: 1px solid rgb(255, 255, 255);
     background-color: transparent;
     color: rgb(255, 255, 255);
     font-size: 100%;
     transition: 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#enter {
+    width: -webkit-fill-available;
+    position: absolute;
+    font-size: clamp(14px, 2vw, 20px);
 }
 
 .button-case:hover {
@@ -84,14 +115,19 @@ input:focus {
 }
 
 #alert-password {
+    bottom: 0;
     font: bold 12pt 'Times New Roman';
     color: red;
     top: 223px;
     display: none;
 }
 
-#button-enter {
-    min-width: 10px;
-    box-sizing: border-box;
-}
 
+@media (max-width: 769px) {
+    #formulario {
+        width: 300px;
+    }
+    #email-box::placeholder, #password-box::placeholder {
+    font-size: 14px;
+ }
+}

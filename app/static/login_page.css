@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     background-color: rgb(49, 49, 49);
+    color: white;
 }
 
 form {
@@ -66,18 +67,65 @@ input::placeholder {
 
 #corpo {
     background-color: rgb(49, 49, 49);
+    color: white;
 }
 
 #complemento {
     flex: 1;
     margin: 0;
+    color: white;
 }
 
-p {
+span {
     margin-left: 47px;
     margin-top: 0;
     font: bold 8pt;
-    color: white;
+    color: rgb(255, 255, 255);
+}
+
+#smartphone-research {
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+
+
+@media (max-width: 600px) {
+    .button-box {
+        display: none;
+    }
+
+    .input-box {
+        width: 100%;
+    }
+
+    form {
+        width: 90%;
+        height: 40px;
+        margin-top: 7px;
+        flex-direction: row;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    #principal {
+        height: 50px;
+    }
+
+    p {
+        margin-left: 11%;
+        margin-top: 0;
+        font-size: 14px;
+        color: white;
+    }
+
+    #smartphone-research {
+    display: block;
+    position: absolute;
+    right: 0;
+    margin-right: 29px;
+}
 }
 
 
